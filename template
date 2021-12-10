@@ -1,0 +1,13 @@
+from aocd import lines
+import utils
+
+
+def a():
+    return 0
+
+
+def b():
+    return 0
+
+
+utils.submit(a(), False)
