@@ -1,11 +1,14 @@
-from aocd import submit as sbmt
+from aocd import submit as sbmt  # type: ignore
+from typing import List, Any, Tuple
 
 
-def int_map(lst):
+def int_map(lst: List[Any]) -> List[int]:
     return list(map(int, lst))
 
 
-def get_surrounding(i, j, grid):
+def get_surrounding(
+    i: int, j: int, grid: List[List[Any]]
+) -> List[Tuple[Tuple[int, int], Any]]:
     width, height = len(grid), len(grid[0])
     deltas = [(-1, 0), (1, 0), (0, 1), (0, -1)]
     res = []
@@ -15,8 +18,8 @@ def get_surrounding(i, j, grid):
     return res
 
 
-def submit(output, actually=False):
-    if actually:
+def submit(output: int, should_submit: bool = False) -> None:
+    if should_submit:
         sbmt(output)
     else:
         print(output)
