@@ -49,7 +49,6 @@ all_paths = set()
 
 
 def visit_b(node: str) -> None:
-    global path
     if node == "end":
         all_paths.add(tuple(path))
     else:
