@@ -20,4 +20,4 @@ def b() -> int:
     return 0
 
 
-utils.submit(a(), actually_submit)
+utils.submit(a() if doing_part_a else b(), actually_submit)
