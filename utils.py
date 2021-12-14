@@ -25,7 +25,7 @@ def get_surrounding(
     return res
 
 
-def submit(output: int, should_submit: bool = False) -> None:
+def submit(output: Any, should_submit: bool = False) -> None:
     if should_submit:
         sbmt(output)
     else:
