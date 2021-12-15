@@ -1,6 +1,8 @@
 from aocd import lines  # type: ignore
 import utils
 from typing import cast, List
+import collections
+import itertools
 
 doing_part_a = True
 actually_submit = False
